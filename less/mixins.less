@@ -12,6 +12,9 @@
     height: 3.5rem;
     width: @width;
     border-radius: 0.8rem;
+    @media @tablet{
+        width: 100%;
+      }
     @media @mobile {
       width: 100%;
       font-size: 1.6rem;
@@ -21,6 +24,11 @@
         cursor: pointer;
     }
   }
+}
+.tablet-expand(){
+    @media @tablet {
+        width: 100%;
+      }
 }
 .mobile-expand() {
   @media @mobile {
