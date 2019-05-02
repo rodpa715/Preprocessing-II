@@ -1,26 +1,65 @@
 // Mixins in here
 .btn-styling(){
-    .btn{
-        color: white;
-        font-size: 1.4rem;
-        font-weight: bold;
-        background-color: @button-bg;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 3.5rem;
-        width: 85%;
-        border-radius: 0.8rem;
-        box-shadow: 0px 0px 1px 0px yellow;
-        @media @mobile{
-            width: 100%;
-            font-size: 1.6rem;
-            height: 4rem;
-          }
+  .btn {
+    .pulse-grow-Animation();
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: @button-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 85%;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 1px 0px yellow;
+    @media @mobile {
+      width: 100%;
+      font-size: 1.6rem;
+      height: 4rem;
+    }
+  }
+}
+.mobile-expand() {
+  @media @mobile {
+    width: 100%;
+  }
+}
+.scale-color-change(){
+    &:hover{
+        transform: scale(1.1,1.1);
+        transition: 0.2s;
+        color: @hoverAnchor;
     }
 }
-.mobile-expand(){
-    @media @mobile{
-        width: 100%;
-      }
+.pulse-grow-Animation() {
+  /*
+    Copyright 2017 Ian Lunn Design Limited
+    */
+  @-webkit-keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+  @keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    -webkit-animation-name: hvr-pulse-grow;
+    animation-name: hvr-pulse-grow;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
 }
