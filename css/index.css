@@ -132,6 +132,11 @@ table {
 html {
   font-size: 62.5%;
 }
+@media (max-width: 500px) {
+  html {
+    font-size: 52%;
+  }
+}
 html,
 body {
   font-family: 'Roboto', sans-serif;
@@ -168,6 +173,12 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    padding: 0 2rem;
+  }
+}
 header {
   width: 100%;
   margin: 0 auto;
@@ -183,8 +194,24 @@ header div {
   align-items: baseline;
   margin: 2rem;
 }
+@media (max-width: 500px) {
+  header div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0;
+  }
+}
 header h1 {
   width: 100%;
+}
+@media (max-width: 500px) {
+  header h1 {
+    width: initial;
+    margin: 1rem 0;
+    margin-top: 2rem;
+  }
 }
 header nav {
   margin-bottom: 1.2rem;
@@ -192,10 +219,22 @@ header nav {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  header nav {
+    padding: 0 1rem;
+    justify-content: space-around;
+    margin: 0.5rem;
+  }
+}
 header nav a {
   font-size: 1.8rem;
   color: #212529;
   text-decoration: none;
+}
+header nav a:hover {
+  transform: scale(1.1, 1.1);
+  transition: 0.2s;
+  color: #ffa500;
 }
 .footer {
   width: 100%;
@@ -218,13 +257,30 @@ header nav a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -232,6 +288,11 @@ header nav a {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -245,6 +306,11 @@ header nav a {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -254,11 +320,21 @@ header nav a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
 }
 .home .content-pick .destination .btn {
+  /*
+    Copyright 2017 Ian Lunn Design Limited
+    */
   color: white;
   font-size: 1.4rem;
   font-weight: bold;
@@ -267,7 +343,45 @@ header nav a {
   justify-content: center;
   align-items: center;
   height: 3.5rem;
-  width: 90%;
+  width: 85%;
   border-radius: 0.8rem;
   box-shadow: 0px 0px 1px 0px yellow;
+}
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.home .content-pick .destination .btn:hover,
+.home .content-pick .destination .btn:focus,
+.home .content-pick .destination .btn:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    width: 100%;
+    font-size: 1.6rem;
+    height: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 90%;
+  }
 }
