@@ -9,8 +9,18 @@
         justify-content: center;
         align-items: center;
         height: 3.5rem;
-        width: 90%;
+        width: 85%;
         border-radius: 0.8rem;
         box-shadow: 0px 0px 1px 0px yellow;
+        @media @mobile{
+            width: 100%;
+            font-size: 1.6rem;
+            height: 4rem;
+          }
     }
+}
+.mobile-expand(){
+    @media @mobile{
+        width: 100%;
+      }
 }

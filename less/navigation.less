@@ -12,15 +12,32 @@ header{
         display: flex;
         align-items: baseline;
         margin: 2rem;
+        @media @mobile{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            max-width: 500px;
+            margin: 0;
+        }
     }
     h1{
         width: 100%;
+        @media @mobile{
+            width: initial;
+            margin: 1rem 0;
+            margin-top: 2rem;
+        }
     }
     nav{
         margin-bottom: 1.2rem;
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @media @mobile{
+            padding: 0 1rem;
+            justify-content: space-around;
+            margin: 0.5rem;
+        }
         a{
         font-size: 1.8rem;
         color: @shark;
