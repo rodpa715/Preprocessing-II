@@ -1,0 +1,31 @@
+.form{
+    margin: 2rem 0;
+    padding-top: 2rem;
+    border-top: 0.2rem dashed @navigation-border;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    *:not(h2){
+        height: 4rem;
+        width: 80%;
+        border-radius: 0.5rem;
+        border: 0.2rem solid grey;
+        padding-left: 1rem;
+    }
+    textarea{
+        height: 15rem;
+        resize: none;
+    }
+    .btn-styling(30%);
+    .btn{
+        border: none;
+    }
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: flex;
+}
