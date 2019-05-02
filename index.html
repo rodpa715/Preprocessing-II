@@ -75,27 +75,49 @@
         <h4>Fun In The Sun</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign.
           Traveler blogger website design expedition clean excursion traveling.</p>
-        <div class="btn">Sign Me Up!</div>
+        <div class="btn fun-sun" onclick="showForm()">Sign Me Up!</div>
       </div>
       <div class="destination">
         <h4>Mountain Excursion</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign.
           Traveler blogger website design expedition clean excursion traveling.</p>
-        <div class="btn">Sign Me Up!</div>
+        <div class="btn mountain" onclick="showForm()">Sign Me Up!</div>
       </div>
       <div class="destination">
         <h4>Island Getaway</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign.
           Traveler blogger website design expedition clean excursion traveling.</p>
-        <div class="btn">Sign Me Up!</div>
+        <div class="btn island" onclick="showForm()">Sign Me Up!</div>
       </div>
     </section>
+    <div class="form hidden">
+        <h2>Where are we traveling to ?</h2>
+        <input type="text" name="name" placeholder="Enter Your Name">
+        <input type="text" name="email" placeholder="Enter Your Email">
+        <input type="text" name="number" placeholder="Enter Your Phone Number">
+        <select>
+            <option value="" disabled selected>Choose a package</option>
+            <option value="Fun-In-The-Sun">Fun In The Sun</option>
+            <option value="Mountain-Excursion">Mountain Excursion</option>
+            <option value="Island-Getaway">Island Getaway</option>
+            <option value="Surprise">Surpise me !</option>
+          </select>
+        <textarea placeholder="Do you have any special instructions?"></textarea>
+        <div class="btn">Let's go</div>
+      </div>
   </div><!-- container -->
 
   <footer class="footer">
     <p>Copyright Fun Bus 2018</p>
   </footer>
-
+<script>
+  const form = document.querySelector(".form");
+  const show = document.querySelector(".show");
+  
+  function showForm(){ 
+  form.classList.toggle("show");
+  }
+</script>
 </body>
 
 </html>
