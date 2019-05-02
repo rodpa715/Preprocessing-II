@@ -139,14 +139,14 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
 h1 {
   font-size: 4rem;
@@ -173,6 +173,13 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 700px) {
+  .container {
+    max-width: 750px;
+    width: 100%;
+    padding: 0 5rem;
+  }
+}
 @media (max-width: 500px) {
   .container {
     max-width: 500px;
@@ -194,6 +201,15 @@ header div {
   align-items: baseline;
   margin: 2rem;
 }
+@media (max-width: 700px) {
+  header div {
+    align-items: baseline;
+    justify-content: space-around;
+    max-width: 700px;
+    padding: 0 5rem;
+    margin: 1rem;
+  }
+}
 @media (max-width: 500px) {
   header div {
     flex-direction: column;
@@ -205,6 +221,11 @@ header div {
 }
 header h1 {
   width: 100%;
+}
+@media (max-width: 700px) {
+  header h1 {
+    width: 50%;
+  }
 }
 @media (max-width: 500px) {
   header h1 {
@@ -251,11 +272,22 @@ header nav a:hover {
   margin: 1.6rem 0;
   border-bottom: 2px dashed #C0C0C0;
 }
+@media (max-width: 700px) {
+  .home p {
+    text-align: justify;
+  }
+}
 .home .content-section {
   margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 700px) {
+  .home .content-section {
+    width: 100%;
+    margin: 20px 0;
+  }
 }
 @media (max-width: 500px) {
   .home .content-section {
@@ -273,6 +305,11 @@ header nav a:hover {
     width: 100%;
   }
 }
+@media (max-width: 700px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
@@ -282,12 +319,27 @@ header nav a:hover {
     width: 100%;
   }
 }
+@media (max-width: 700px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content img {
   border-radius: 10px;
+}
+@media (max-width: 700px) {
+  .home .content-section .img-content img {
+    width: 100%;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 700px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
 }
 @media (max-width: 500px) {
   .home .inverse-content {
@@ -311,6 +363,11 @@ header nav a:hover {
     width: 100%;
   }
 }
+@media (max-width: 700px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -319,6 +376,14 @@ header nav a:hover {
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 700px) {
+  .home .content-pick {
+    text-align: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+  }
 }
 @media (max-width: 500px) {
   .home .content-pick {
@@ -345,7 +410,6 @@ header nav a:hover {
   height: 3.5rem;
   width: 85%;
   border-radius: 0.8rem;
-  box-shadow: 0px 0px 1px 0px yellow;
 }
 @-webkit-keyframes hvr-pulse-grow {
   to {
@@ -373,6 +437,11 @@ header nav a:hover {
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
+@media (max-width: 700px) {
+  .home .content-pick .destination .btn {
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
     width: 100%;
@@ -380,8 +449,226 @@ header nav a:hover {
     height: 4rem;
   }
 }
+.home .content-pick .destination .btn:hover {
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .home .content-pick .destination {
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .home .content-pick .destination {
     width: 90%;
   }
+}
+.form {
+  margin: 2rem 0;
+  padding-top: 2rem;
+  border-top: 0.2rem dashed #C0C0C0;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.form *:not(h2) {
+  height: 4rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  border: 0.2rem solid grey;
+  padding-left: 1rem;
+}
+.form *:not(h2) .btn {
+  /*
+    Copyright 2017 Ian Lunn Design Limited
+    */
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: #2D8080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 30%;
+  border-radius: 0.8rem;
+}
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.form *:not(h2) .btn:hover,
+.form *:not(h2) .btn:focus,
+.form *:not(h2) .btn:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@media (max-width: 700px) {
+  .form *:not(h2) .btn {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .form *:not(h2) .btn {
+    width: 100%;
+    font-size: 1.6rem;
+    height: 4rem;
+  }
+}
+.form *:not(h2) .btn:hover {
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .form *:not(h2) {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .form *:not(h2) {
+    width: 100%;
+  }
+}
+.form textarea {
+  height: 15rem;
+  resize: none;
+}
+.form .btn {
+  /*
+    Copyright 2017 Ian Lunn Design Limited
+    */
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: #2D8080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 30%;
+  border-radius: 0.8rem;
+}
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.form .btn:hover,
+.form .btn:focus,
+.form .btn:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@media (max-width: 700px) {
+  .form .btn {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .form .btn {
+    width: 100%;
+    font-size: 1.6rem;
+    height: 4rem;
+  }
+}
+.form .btn:hover {
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .form .btn {
+    /*
+    Copyright 2017 Ian Lunn Design Limited
+    */
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: #2D8080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+  @-webkit-keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+  @keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+  .form .btn:hover,
+  .form .btn:focus,
+  .form .btn:active {
+    -webkit-animation-name: hvr-pulse-grow;
+    animation-name: hvr-pulse-grow;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+  .form .btn:hover {
+    cursor: pointer;
+  }
+}
+@media (max-width: 500px) and (max-width: 700px) {
+  .form .btn {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
+  .form .btn {
+    width: 100%;
+    font-size: 1.6rem;
+    height: 4rem;
+  }
+}
+.form .btn {
+  border: none;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: flex;
 }
