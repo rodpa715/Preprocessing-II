@@ -13,12 +13,19 @@
         border-radius: 0.5rem;
         border: 0.2rem solid grey;
         padding-left: 1rem;
+        .btn-styling(30%);
+        @media @mobile {
+            width: 100%;
+        }
     }
     textarea{
         height: 15rem;
         resize: none;
     }
     .btn-styling(30%);
+    @media @mobile {
+        .btn-styling(100%);
+    }
     .btn{
         border: none;
     }
