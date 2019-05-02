@@ -258,3 +258,16 @@ header nav a {
   width: 30%;
   margin-bottom: 30px;
 }
+.home .content-pick .destination .btn {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: #2D8080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 90%;
+  border-radius: 0.8rem;
+  box-shadow: 0px 0px 1px 0px yellow;
+}
